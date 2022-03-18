@@ -143,7 +143,7 @@
          <Label layoutX="149.0" layoutY="272.0" text="Categoría:" />
          <Label layoutX="148.0" layoutY="342.0" text="Respuesta:" />
       </children></Pane>
-   <Pane fx:id="pViewClass" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+   <Pane fx:id="pViewClass" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
          <TableView fx:id="TablaClases" layoutX="46.0" layoutY="127.0" prefHeight="200.0" prefWidth="389.0">
            <columns>
@@ -155,6 +155,17 @@
          <ComboBox fx:id="idClassV" layoutX="285.0" layoutY="65.0" prefWidth="150.0" promptText="ID Clase" />
          <Button fx:id="closeView" layoutX="206.0" layoutY="356.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="68.0" text="Close" />
       </children></Pane>
-   <Pane prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   <Pane fx:id="pMatricular" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+         <TableView fx:id="tClasesMatricular" layoutX="40.0" layoutY="127.0" prefHeight="200.0" prefWidth="389.0">
+           <columns>
+             <TableColumn prefWidth="98.0" text="ID Clase" />
+             <TableColumn prefWidth="165.0" text="Clase" />
+               <TableColumn prefWidth="125.0" text="Matricular" />
+           </columns>
+         </TableView>
+         <Button layoutX="148.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#matricular" text="Matricular Clases Seleccionadas" />
+         <Button layoutX="214.0" layoutY="406.0" mnemonicParsing="false" onMouseClicked="#closePaneMatricular" text="Close" />
+      </children></Pane>
    <Pane prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 </AnchorPane>

@@ -4,35 +4,35 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
-<Pane fx:id="pLog" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="453.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="pLog" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="480.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button layoutX="271.0" layoutY="251.0" mnemonicParsing="false" text="Ingresar">
+      <Button layoutX="206.0" layoutY="251.0" mnemonicParsing="false" text="Ingresar">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <TextField layoutX="231.0" layoutY="153.0" promptText="Ingrese su usuario">
+      <TextField layoutX="161.0" layoutY="153.0" promptText="Ingrese su usuario">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </TextField>
-      <PasswordField layoutX="231.0" layoutY="203.0" prefHeight="24.0" prefWidth="159.0" promptText="Ingrese la contraseña">
+      <PasswordField layoutX="161.0" layoutY="204.0" prefHeight="24.0" prefWidth="159.0" promptText="Ingrese la contraseña">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </PasswordField>
-      <Label layoutX="144.0" layoutY="157.0" text="Username:">
+      <Label layoutX="86.0" layoutY="155.0" text="Username:">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="144.0" layoutY="206.0" text="Password:">
+      <Label layoutX="90.0" layoutY="206.0" text="Password:">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <TitledPane fx:id="pReg" expanded="false" layoutX="139.0" layoutY="73.0" prefHeight="260.0" prefWidth="332.0" text="Registrar">
+      <TitledPane fx:id="pReg" expanded="false" layoutX="74.0" layoutY="75.0" prefHeight="260.0" prefWidth="332.0" text="Registrar" visible="false">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                <children>
@@ -74,4 +74,59 @@
       </TitledPane>
    </children>
 </Pane>
+   <Pane fx:id="pMenu" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+         <GridPane fx:id="pStudent" layoutX="90.0" layoutY="197.0" visible="false">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="111.0" />
+             <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="76.0" />
+             <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="113.0" />
+           </columnConstraints>
+           <rowConstraints>
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+            <children>
+               <Button fx:id="btnMatricular" mnemonicParsing="false" onMouseClicked="#MatricularClass" prefHeight="25.0" prefWidth="75.0" text="Matricular" GridPane.columnIndex="1" />
+               <Button fx:id="btnRealiceE" mnemonicParsing="false" onMouseClicked="#RealiceExam" prefHeight="46.0" prefWidth="115.0" text="Realizar Examen" GridPane.rowIndex="1" />
+               <Button fx:id="btnViewNotes" mnemonicParsing="false" onMouseClicked="#ViewNotes" prefHeight="46.0" prefWidth="115.0" text="Ver Notas" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            </children>
+         </GridPane>
+         <GridPane fx:id="pAdmin" layoutX="90.0" layoutY="152.0" visible="false">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           </columnConstraints>
+           <rowConstraints>
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+            <children>
+               <Button fx:id="btnCreateE" mnemonicParsing="false" onMouseClicked="#CreateExam" prefHeight="25.0" prefWidth="99.0" text="Crear Examen" />
+               <Button fx:id="btnCreateClass" mnemonicParsing="false" onMouseClicked="#CreateClass" prefHeight="25.0" prefWidth="101.0" text="Crear Clase" GridPane.columnIndex="2" />
+               <Button fx:id="btnCreateCategory" mnemonicParsing="false" onMouseClicked="#CreateCategory" prefHeight="25.0" prefWidth="99.0" text="Crear Categoría" GridPane.rowIndex="1" />
+               <Button fx:id="btnCreateQuestion" mnemonicParsing="false" onMouseClicked="#CreateQuestion" prefHeight="25.0" prefWidth="100.0" text="Crear Pregunta" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+               <Button fx:id="btnViewClass" mnemonicParsing="false" onMouseClicked="#ViewClass" prefHeight="25.0" prefWidth="98.0" text="Ver Clases" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+         </GridPane>
+         <Button layoutX="381.0" layoutY="414.0" mnemonicParsing="false" text="Cerrar sesión" />
+         <TitledPane animated="false" layoutX="46.0" layoutY="49.0" prefHeight="206.0" prefWidth="389.0" text="Crear Examen">
+           <content>
+             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                     <ComboBox layoutX="195.0" layoutY="27.0" prefWidth="150.0" promptText="ID Clase" />
+                     <ComboBox layoutX="196.0" layoutY="98.0" prefWidth="150.0" />
+                     <Button layoutX="152.0" layoutY="141.0" mnemonicParsing="false" text="Crear Examen" />
+                     <Spinner layoutX="197.0" layoutY="65.0" />
+                  </children></AnchorPane>
+           </content>
+         </TitledPane>
+      </children>
+   </Pane>
+   <Pane prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   <Pane prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   <Pane prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   <Pane prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 </AnchorPane>
